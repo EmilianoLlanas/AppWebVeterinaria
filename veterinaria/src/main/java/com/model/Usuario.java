@@ -6,8 +6,6 @@ public class Usuario {
 	private String password;
 	private String confirmarPassword;
 	private String estadoUsuario;
-
-
 	public int getIdUsuario() {
 		return idUsuario;
 	}
@@ -38,8 +36,6 @@ public class Usuario {
 	public void setEstadoUsuario(String estadoUsuario) {
 		this.estadoUsuario = estadoUsuario;
 	}
-
-
 
 
 }

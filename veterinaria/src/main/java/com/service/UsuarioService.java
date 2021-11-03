@@ -17,8 +17,8 @@ public class UsuarioService {
 		return usuario;
 	}
 
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
+	public void setUsuario(Usuario usuarioo) {
+		this.usuario = usuarioo;
 	}
 
 	public boolean isUserRegister() throws SQLException {
@@ -51,7 +51,7 @@ public class UsuarioService {
 		Conexion conexion = new Conexion();
 		Connection conn = conexion.establishConnection().getCon();
 
-		String sql = "SELECT idUsuario,user,estatus FROM veterinaria.usuario";
+		String sql = "SELECT idUsuario,user,estadoUsuario FROM veterinaria.usuario";
 		PreparedStatement ps = conn.prepareStatement(sql);
 		ResultSet rs = ps.executeQuery();
 
@@ -62,7 +62,7 @@ public class UsuarioService {
 
 			usuario.setIdUsuario(rs.getInt(1));
 			usuario.setUser(rs.getString(2));
-			usuario.setEstadoUsuario(rs.getString("estatus"));
+			usuario.setEstadoUsuario(rs.getString("estadoUsuario"));
 
 			usuarios.add(usuario);
 
@@ -76,7 +76,7 @@ public class UsuarioService {
 	{
 		Conexion conexion = new Conexion();
 		Connection conn = conexion.establishConnection().getCon();
-		String sql = "UPDATE  usuario SET password=?, SET confirmarPassword=?, SET estadoUsuario=? WHERE veterinaria.usuario.idUsuario=?";
+		String sql = "UPDATE  veterinaria.usuario SET password=?, SET confirmarPassword=?, SET estadoUsuario=? WHERE idUsuario=?";
 		PreparedStatement ps = conn.prepareStatement(sql);
 		ps.setString(1, usuario.getPassword());
 		ps.setString(2, usuario.getConfirmarPassword());
@@ -119,4 +119,5 @@ public class UsuarioService {
 		conexion.closeConnection();
 
 	}
+	
 }
