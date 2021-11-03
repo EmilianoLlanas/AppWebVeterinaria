@@ -48,6 +48,12 @@
      		<result name="success">/WEB-INF/veterinaria/verPacientes.jsp</result>
 		</action>
 		
+	<action name="editarDueno" 
+       		   class="com.veterinaria.EditarDuenoAction" 
+       		   method="init">
+     		<result name="success">/WEB-INF/veterinaria/editarDueno.jsp</result>
+		</action>
+		
 	<action name="consultaGeneral" 
        		   class="com.veterinaria.ConsultaGeneralAction" 
        		   method="init">
