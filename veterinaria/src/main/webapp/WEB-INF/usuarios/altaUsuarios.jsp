@@ -12,62 +12,32 @@
 <title>Alta usuarios</title>
 </head>
 <body>
-<nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #e3f2fd; color: blue; margin-bottom: 30px;">
-  <a class="navbar-brand" href="#">Veterinaria</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-      <s:url var="cuenta" action= "crearCuenta"></s:url>
-        <s:a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></s:a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Administrar usuarios
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <s:url var="altaUsuario" action= "altaUsuario"></s:url>
-          <s:a action= "altaUsuario" class="dropdown-item" href="%{altaUsuario}">Alta de usuarios</s:a>
-          <s:url var="consultarUsuarios" action= "consultarUsuarios"></s:url>
-          <s:a action= "consultarUsuarios" class="dropdown-item" href="%{consultarUsuarios}">Consultar usuarios</s:a>
-        </div>
-      </li>
-      
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Administrar veterinaria
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <s:url var="consultarDuenos" action= "consultarDuenos"></s:url>
-          <s:a action= "consultarDuenos" class="dropdown-item" href="%{consultarDuenos}">Consultar dueños</s:a>
-          
-          <s:url var="altaDueno" action= "altaDueno"></s:url>
-          <s:a action= "altaDueno" class="dropdown-item" href="%{altaDueno}">Alta de dueño</s:a>
-          
-          <s:url var="verPacientes" action= "verPacientes"></s:url>
-          <s:a action= "verPacientes" class="dropdown-item" href="%{verPacientes}">Ver pacientes</s:a>
-          
-          <s:url var="consultaGeneral" action= "consultaGeneral"></s:url>
-          <s:a action= "consultaGeneral" class="dropdown-item" href="%{consultaGeneral}">Consulta general</s:a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Salir</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+<%@include file="../menu.jsp" %>
 <div class="container">
 	<div class="card" style="margin-top: 70px;">
 	  <div class="card-header">
 	    Alta de usuarios
 	  </div>
 	  <div class="card-body">
-	    <h5 class="card-title">Special title treatment</h5>
-	    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-	    <a href="#" class="btn btn-primary">Go somewhere</a>
+	    <form>
+  <div class="form-group">
+  <label for="usuario">Usuario</label>
+    <s:textfield type="text" class="form-control" id="usuario" name="usuario" label="Usuario" placeholder="Usuario"></s:textfield>
+  </div>
+  <div class="form-group">
+  <label for="password1">Contraseña</label>
+    <s:textfield type="password" class="form-control" id="password1" name="password1" label="Contraseña" placeholder="Contraseña"></s:textfield>
+  </div>
+  <div class="form-group">
+  <label for="password2">Confirmar contraseña</label>
+    <s:textfield type="password" class="form-control" id="password2" name="password2" label="Confirmar contraseña" placeholder="Confirmar contraseña"></s:textfield>
+  </div>
+  <div class="form-group">
+    <label for="estado">Estado</label>
+    <s:select class="form-control" id="estado" name="estado" list="#{'01':'Activo', '02':'Bloqueado', '03':'Inactivo'}" value="estado" required="true" label="Estado"/>
+  </div>
+  <s:submit  class="btn btn-primary" value="Enviar"/>
+</form>
 	  </div>
 	</div>
 </div>
