@@ -42,6 +42,12 @@
      		<result name="success">/WEB-INF/veterinaria/altaDueno.jsp</result>
 		</action>
 		
+	<action name="altaPaciente" 
+       		   class="com.veterinaria.AltaPacienteAction" 
+       		   method="init">
+     		<result name="success">/WEB-INF/veterinaria/altaPaciente.jsp</result>
+		</action>
+		
 	<action name="verPacientes" 
        		   class="com.veterinaria.VerPacientesAction" 
        		   method="init">
