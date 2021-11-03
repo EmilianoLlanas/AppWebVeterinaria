@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+     <%@ taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +9,9 @@
 <title>Consulta general</title>
 </head>
 <body>
+
 <div class="container">
+
   <div class="row mb-5">
     <%@include file="../menu.jsp" %><br>
   </div>
@@ -69,5 +72,6 @@
 
     </div>
     </div>
+ </div>  
 </body>
 </html>

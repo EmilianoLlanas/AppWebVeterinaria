@@ -17,9 +17,18 @@ import com.service.UsuarioService;
 public class BajaUsuarioAction extends ActionSupport implements SessionAware{
 	private static final long serialVersionUID = 1L;
 	private Usuario usuario;
+	private String justificacion;
 	private HashMap<Integer, Usuario> usuarios;
 	private Map<String, Object> session;
 
+	public String getJustificacion() {
+		return justificacion;
+	}
+
+	public void setJustificacion(String justificacion) {
+		this.justificacion = justificacion;
+	}
+	
 	@Override
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
@@ -45,6 +54,9 @@ public class BajaUsuarioAction extends ActionSupport implements SessionAware{
 		this.usuario = usuario;
 	}
 
+	public String init() {
+		return "success";
+	}
 
 	public String execute() throws SQLException {
 		String ret = ERROR;

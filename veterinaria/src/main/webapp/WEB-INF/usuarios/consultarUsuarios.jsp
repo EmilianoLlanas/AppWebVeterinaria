@@ -61,6 +61,8 @@
               <td align="center">
                 <s:url var="bajaUSER" action="bajaUsuario">
                     <s:param name="usuario.idUsuario" value="idUsuario" />
+                    <s:param name="usuario.user" value="user" />
+                    <s:param name="usuario.estadoUsuario" value="estadoUsuario" />
 				</s:url>
                 <s:a href="%{bajaUSER}"><i class="fas fa-trash" >Baja</i></s:a>
               </td>
