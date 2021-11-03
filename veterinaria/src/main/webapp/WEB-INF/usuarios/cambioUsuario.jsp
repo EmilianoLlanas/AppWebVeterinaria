@@ -11,20 +11,20 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
-<title>Alta usuarios</title>
+<title>Cambio a usuario</title>
 </head>
 <body>
 <%@include file="../menu.jsp" %>
 <div class="container">
 	<div class="card" style="margin-top: 70px;">
 	  <div class="card-header">
-	    Alta de usuarios
+	    Cambio a usuario
 	  </div>
 	  <div class="card-body">
 <s:form>
   <div class="form-group">
   <label for="usuario">Usuario</label>
-    <s:textfield type="text" class="form-control" id="usuario" name="usuario" label="Usuario" placeholder="Usuario"></s:textfield>
+    <s:textfield type="text" class="form-control" id="usuario" name="usuario" label="Usuario" placeholder="Usuario" disabled="true"></s:textfield>
   </div>
   <div class="form-group">
   <label for="password1">Contraseña</label>

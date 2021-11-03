@@ -28,9 +28,10 @@
           Administrar usuarios
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <s:url var="altaUsuario" action= "altaUsuario"></s:url>
+          <s:url var="altaUsuario" action= "altaUsuario"></s:url>
           <s:a action= "altaUsuario" class="dropdown-item" href="%{altaUsuario}">Alta de usuarios</s:a>
-          <a class="dropdown-item" href="#">Consultar usuarios</a>
+          <s:url var="consultarUsuarios" action= "consultarUsuarios"></s:url>
+          <s:a action= "consultarUsuarios" class="dropdown-item" href="%{consultarUsuarios}">Consultar usuarios</s:a>
         </div>
       </li>
       
@@ -39,9 +40,17 @@
           Administrar veterinaria
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Consultar dueños</a>
-          <a class="dropdown-item" href="#">Alta de dueño</a>
-          <a class="dropdown-item" href="#">Consulta general</a>
+          <s:url var="consultarDuenos" action= "consultarDuenos"></s:url>
+          <s:a action= "consultarDuenos" class="dropdown-item" href="%{consultarDuenos}">Consultar dueños</s:a>
+          
+          <s:url var="altaDueno" action= "altaDueno"></s:url>
+          <s:a action= "altaDueno" class="dropdown-item" href="%{altaDueno}">Alta de dueño</s:a>
+          
+          <s:url var="verPacientes" action= "verPacientes"></s:url>
+          <s:a action= "verPacientes" class="dropdown-item" href="%{verPacientes}">Ver pacientes</s:a>
+          
+          <s:url var="consultaGeneral" action= "consultaGeneral"></s:url>
+          <s:a action= "consultaGeneral" class="dropdown-item" href="%{consultaGeneral}">Consulta general</s:a>
         </div>
       </li>
       <li class="nav-item">
@@ -50,6 +59,6 @@
     </ul>
   </div>
 </nav>
-<h1 style="margin-top: 50px;">bichoooooo</h1>
+
 </body>
 </html>

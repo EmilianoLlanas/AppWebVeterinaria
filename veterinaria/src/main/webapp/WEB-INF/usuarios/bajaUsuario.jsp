@@ -11,32 +11,28 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
-<title>Alta usuarios</title>
+<title>Baja de usuario</title>
 </head>
 <body>
 <%@include file="../menu.jsp" %>
 <div class="container">
 	<div class="card" style="margin-top: 70px;">
 	  <div class="card-header">
-	    Alta de usuarios
+	    Baja de usuario
 	  </div>
 	  <div class="card-body">
 <s:form>
   <div class="form-group">
   <label for="usuario">Usuario</label>
-    <s:textfield type="text" class="form-control" id="usuario" name="usuario" label="Usuario" placeholder="Usuario"></s:textfield>
-  </div>
-  <div class="form-group">
-  <label for="password1">Contraseña</label>
-    <s:textfield type="password" class="form-control" id="password1" name="password1" label="Contraseña" placeholder="Contraseña"></s:textfield>
-  </div>
-  <div class="form-group">
-  <label for="password2">Confirmar contraseña</label>
-    <s:textfield type="password" class="form-control" id="password2" name="password2" label="Confirmar contraseña" placeholder="Confirmar contraseña"></s:textfield>
+    <s:textfield type="text" class="form-control" id="usuario" name="usuario" label="Usuario" placeholder="Usuario" disabled="true"></s:textfield>
   </div>
   <div class="form-group">
     <label for="estado">Estado</label>
-    <s:select class="form-control" id="estado" name="estado" list="#{'01':'Activo', '02':'Bloqueado', '03':'Inactivo'}" value="estado" required="true" label="Estado"/>
+    <s:select class="form-control" id="estado" name="estado" list="#{'01':'Activo', '02':'Bloqueado', '03':'Inactivo'}" value="estado" required="true" disabled="true" label="Estado"/>
+  </div>
+  <div class="form-group">
+  <label for="justificacion">Justificación</label>
+    <s:textfield type="text" class="form-control" id="justificacion" name="justificacion" label="Justificacion" placeholder="Justificacion"></s:textfield>
   </div>
   <s:submit  class="btn btn-success" value="Aceptar"/>
   <s:submit  class="btn btn-danger" value="Cancelar"/>

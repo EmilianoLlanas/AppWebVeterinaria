@@ -17,10 +17,59 @@
             <result name="input">/index.jsp</result>
     </action>
 
+
 	<action name="altaUsuario" 
        		   class="com.usuarios.AltaUsuariosAction" 
        		   method="init">
      		<result name="success">/WEB-INF/usuarios/altaUsuarios.jsp</result>
+		</action>
+		
+	<action name="consultarUsuarios" 
+       		   class="com.usuarios.ConsultarUsuariosAction" 
+       		   method="init">
+     		<result name="success">/WEB-INF/usuarios/consultarUsuarios.jsp</result>
+		</action>
+		
+	<action name="consultarDuenos" 
+       		   class="com.veterinaria.ConsultarDuenosAction" 
+       		   method="init">
+     		<result name="success">/WEB-INF/veterinaria/consultarDuenos.jsp</result>
+		</action>
+		
+	<action name="altaDueno" 
+       		   class="com.veterinaria.AltaDuenoAction" 
+       		   method="init">
+     		<result name="success">/WEB-INF/veterinaria/altaDueno.jsp</result>
+		</action>
+		
+	<action name="verPacientes" 
+       		   class="com.veterinaria.VerPacientesAction" 
+       		   method="init">
+     		<result name="success">/WEB-INF/veterinaria/verPacientes.jsp</result>
+		</action>
+		
+	<action name="editarDueno" 
+       		   class="com.veterinaria.EditarDuenoAction" 
+       		   method="init">
+     		<result name="success">/WEB-INF/veterinaria/editarDueno.jsp</result>
+		</action>
+		
+	<action name="consultaGeneral" 
+       		   class="com.veterinaria.ConsultaGeneralAction" 
+       		   method="init">
+     		<result name="success">/WEB-INF/veterinaria/consultaGeneral.jsp</result>
+		</action>
+		
+		<action name="cambioUsuario" 
+       		   class="com.usuarios.CambioUsuariosAction" 
+       		   method="init">
+     		<result name="success">/WEB-INF/usuarios/cambioUsuario.jsp</result>
+		</action>
+		
+		<action name="bajaUsuario" 
+       		   class="com.usuarios.BajaUsuarioAction" 
+       		   method="init">
+     		<result name="success">/WEB-INF/usuarios/bajaUsuario.jsp</result>
 		</action>
 
 

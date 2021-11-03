@@ -1,6 +1,6 @@
 package com.veterinaria;
 
-public class VarPacientesAction {
+public class VerPacientesAction {
 public String init() {
 		
 		return "success";
