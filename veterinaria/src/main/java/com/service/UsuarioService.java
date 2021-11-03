@@ -51,7 +51,7 @@ public class UsuarioService {
 		Conexion conexion = new Conexion();
 		Connection conn = conexion.establishConnection().getCon();
 
-		String sql = "SELECT idUsuario,user,estatus FROM veterinaria.usuario";
+		String sql = "SELECT idUsuario,user,estadoUsuario FROM veterinaria.usuario";
 		PreparedStatement ps = conn.prepareStatement(sql);
 		ResultSet rs = ps.executeQuery();
 
@@ -62,7 +62,7 @@ public class UsuarioService {
 
 			usuario.setIdUsuario(rs.getInt(1));
 			usuario.setUser(rs.getString(2));
-			usuario.setEstadoUsuario(rs.getString("estatus"));
+			usuario.setEstadoUsuario(rs.getString("estadoUsuario"));
 
 			usuarios.add(usuario);
 
