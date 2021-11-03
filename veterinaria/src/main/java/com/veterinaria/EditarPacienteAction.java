@@ -1,6 +1,6 @@
 package com.veterinaria;
 
-public class BajaPacienteAction {
+public class EditarPacienteAction {
 public String init() {
 		
 		return "success";
