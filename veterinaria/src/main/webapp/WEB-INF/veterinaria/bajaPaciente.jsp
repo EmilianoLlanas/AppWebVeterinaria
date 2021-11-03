@@ -24,23 +24,27 @@
 <s:form>
   <div class="form-group">
   <label for="nombre">Nombre del paciente</label>
-    <s:textfield type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre del paciente"></s:textfield>
+    <s:textfield type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre del paciente" disabled="true"></s:textfield>
   </div>
   <div class="form-group">
     <label for="estado">Categoria</label>
-    <s:select class="form-control" id="categoria" name="categoria" list="#{'01':'Perro', '02':'Gato', '03':'Ave'}" value="categoria" required="true" label="Categoria"/>
+    <s:select class="form-control" id="categoria" name="categoria" list="#{'01':'Perro', '02':'Gato', '03':'Ave'}" value="categoria" required="true" label="Categoria" disabled="true"/>
   </div>
   <div class="form-group">
   <label for="telefono">Edad</label>
-    <s:textfield type="text" class="form-control" id="edad" name="edad" placeholder="Edad"></s:textfield>
+    <s:textfield type="text" class="form-control" id="edad" name="edad" placeholder="Edad" disabled="true"></s:textfield>
   </div>
   <div class="form-group">
   <label for="dueno">Dueño</label>
-    <s:textfield type="text" class="form-control" id="dueno" name="dueno" placeholder="Nombre completo"></s:textfield>
+    <s:textfield type="text" class="form-control" id="dueno" name="dueno" placeholder="Nombre completo" disabled="true"></s:textfield>
   </div>
   <div class="form-group">
   <label for="telefono">Teléfono</label>
-    <s:textfield type="text" class="form-control" id="telefono" name="telefono" placeholder="Teléfono"></s:textfield>
+    <s:textfield type="text" class="form-control" id="telefono" name="telefono" placeholder="Teléfono" disabled="true"></s:textfield>
+  </div>
+  <div class="form-group">
+  <label for="justificacion">Justificación</label>
+    <s:textfield type="text" class="form-control" id="justificacion" name="justificacion" label="Justificacion" placeholder="Justificacion" ></s:textfield>
   </div>
   <s:submit  class="btn btn-success" value="Aceptar"/>
   <s:submit  class="btn btn-danger" value="Cancelar"/>
