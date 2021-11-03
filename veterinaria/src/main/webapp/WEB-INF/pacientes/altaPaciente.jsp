@@ -1,56 +1,44 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="s" uri="/struts-tags" %>    
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Alta Paciente</title>
-	<link href="styles/validation.css" rel="stylesheet">
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<title>Alta de pacientes</title>
 </head>
 <body>
+<%@include file="../menu.jsp" %>
 <div class="container">
-	 <div class="row mb-5">
-    <%@include file="../menu.jsp" %><br>
-  	</div>
-  	
-	<s:if test="hasActionErrors()">
-		<s:actionerror/>
-	</s:if>
-	
-	<div class="row">
-	 	<div class="col">
-			<s:form action="altaPaciente" method="POST" id="formulario">
-			<div class="row form-group ">
-				<div class="col-sm-12 col-md-6 col-lg-3 control-group">
-				<label for=Nombre class="form-label">Nombre</label>
-				<s:textfield name="paciente.nombre" id="Nombre" cssClass="form-control" required="true"/>
-				<s:fielderror cssClass="text-danger" fieldName="paciente.nombre"/>
-				</div>
-				
-				<div class="col-sm-12 col-md-6 col-lg-3 control-group">
-				<label for=Categoria class="form-label">Categoria</label>
-				<s:textfield name="paciente.categoria" id="Nombre" cssClass="form-control" required="true"/>
-				<s:fielderror cssClass="text-danger" fieldName="paciente.categoria"/>
-				</div>
-				
-				<div class="col-sm-12 col-md-6 col-lg-3 control-group">
-				<label for=Edad class="form-label">Edad</label>
-				<s:textfield name="paciente.edad" id="Nombre" cssClass="form-control" required="true"/>
-				<s:fielderror cssClass="text-danger" fieldName="paciente.edad"/>
-				</div>
-			</div>
-				<div class="btn-group mt-2 col-sm-12 col-md-6 col-lg-4 " role="group" >
-					<s:submit value="Enviar" cssClass="btn btn-outline-primary"/>
-					<s:url var="regresar" action="consultarPaciente">
-					</s:url>
-					<s:a href="%{regresar}" cssClass="btn btn-outline-danger">Cancelar</s:a>
-				</div>
-	</s:form>
+	<div class="card" style="margin-top: 70px;">
+	  <div class="card-header">
+	    Alta de pacientes
+	  </div>
+	  <div class="card-body">
+<s:form>
+  <div class="form-group">
+  <label for="nombre">Nombre</label>
+    <s:textfield type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre"></s:textfield>
+  </div>
+  <div class="form-group">
+  <label for="categoria">Categoria</label>
+    <s:textfield type="text" class="form-control" id="categoria" name="categoria" placeholder="Categoria"></s:textfield>
+  </div>
+  <div class="form-group">
+  <label for="edad">Edad</label>
+    <s:textfield type="text" class="form-control" id="edad" name="edad" placeholder="Edad"></s:textfield>
+  </div>
+  <s:submit  class="btn btn-success" value="Aceptar"/>
+  <s:submit  class="btn btn-danger" value="Cancelar"/>
+</s:form>
+	  </div>
 	</div>
 </div>
-	<br>
-</div>
-	<script src="scripts/datosProducto.js"></script>	
 </body>
 </html>
