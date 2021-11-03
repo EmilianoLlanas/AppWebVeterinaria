@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,14 +20,16 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+      <s:url var="cuenta" action= "crearCuenta"></s:url>
+        <s:a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></s:a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Administrar usuarios
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Alta de usuarios</a>
+        <s:url var="altaUsuario" action= "altaUsuario"></s:url>
+          <s:a action= "altaUsuario" class="dropdown-item" href="%{altaUsuario}">Alta de usuarios</s:a>
           <a class="dropdown-item" href="#">Consultar usuarios</a>
         </div>
       </li>

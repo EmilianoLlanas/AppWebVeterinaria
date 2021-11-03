@@ -10,12 +10,19 @@
 
        
 
-          <action name="login" 
+	<action name="login" 
 		        class="com.action.LoginAction"
 		        method="execute">
             <result name="success">/WEB-INF/menu.jsp</result>
             <result name="input">/index.jsp</result>
-        </action>
+    </action>
+
+	<action name="altaUsuario" 
+       		   class="com.usuarios.AltaUsuariosAction" 
+       		   method="init">
+     		<result name="success">/WEB-INF/usuarios/altaUsuarios.jsp</result>
+		</action>
+
 
     </package>
 
