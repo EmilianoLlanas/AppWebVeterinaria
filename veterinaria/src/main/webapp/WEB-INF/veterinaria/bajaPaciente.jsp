@@ -5,11 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
 
 <title>Alta de paciente</title>
 </head>
@@ -22,25 +18,26 @@
 	  </div>
 	  <div class="card-body">
 <s:form>
+<s:hidden name="paciente.pacienteId"></s:hidden>
   <div class="form-group">
   <label for="nombre">Nombre del paciente</label>
-    <s:textfield type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre del paciente" disabled="true"></s:textfield>
+    <s:textfield type="text" class="form-control" id="paciente.nombre" name="paciente.nombre" placeholder="Nombre del paciente" disabled="true"></s:textfield>
   </div>
   <div class="form-group">
-    <label for="estado">Categoria</label>
-    <s:select class="form-control" id="categoria" name="categoria" list="#{'01':'Perro', '02':'Gato', '03':'Ave'}" value="categoria" required="true" label="Categoria" disabled="true"/>
+    <label for="categoria">Categoria</label>
+    <s:select class="form-control" id="paciente.categoria" name="paciente.categoria" list="#{'01':'Perro', '02':'Gato', '03':'Ave'}" value="categoria" required="true" label="Categoria" disabled="true"/>
   </div>
   <div class="form-group">
-  <label for="telefono">Edad</label>
-    <s:textfield type="text" class="form-control" id="edad" name="edad" placeholder="Edad" disabled="true"></s:textfield>
+  <label for="edad">Edad</label>
+    <s:textfield type="text" class="form-control" id="paciente.edad" name="paciente.edad" placeholder="Edad" disabled="true"></s:textfield>
   </div>
   <div class="form-group">
-  <label for="dueno">Dueño</label>
-    <s:textfield type="text" class="form-control" id="dueno" name="dueno" placeholder="Nombre completo" disabled="true"></s:textfield>
+  <label for="nombreDueno">Dueño</label>
+    <s:textfield type="text" class="form-control" id="paciente.nombreDueno" name="paciente.nombreDueno" placeholder="Nombre completo" disabled="true"></s:textfield>
   </div>
   <div class="form-group">
-  <label for="telefono">Teléfono</label>
-    <s:textfield type="text" class="form-control" id="telefono" name="telefono" placeholder="Teléfono" disabled="true"></s:textfield>
+  <label for="telefonoDueno">Teléfono</label>
+    <s:textfield type="text" class="form-control" id="paciente.telefonoDueno" name="paciente.telefonoDueno" placeholder="Teléfono" disabled="true"></s:textfield>
   </div>
   <div class="form-group">
   <label for="justificacion">Justificación</label>
