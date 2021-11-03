@@ -19,7 +19,7 @@
 	    Alta de usuarios
 	  </div>
 	  <div class="card-body">
-	    <form>
+<form>
   <div class="form-group">
   <label for="usuario">Usuario</label>
     <s:textfield type="text" class="form-control" id="usuario" name="usuario" label="Usuario" placeholder="Usuario"></s:textfield>

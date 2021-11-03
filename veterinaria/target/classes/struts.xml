@@ -22,6 +22,12 @@
        		   method="init">
      		<result name="success">/WEB-INF/usuarios/altaUsuarios.jsp</result>
 		</action>
+		
+	<action name="altaUsuario" 
+       		   class="com.usuarios.AltaUsuariosAction" 
+       		   method="init">
+     		<result name="success">/WEB-INF/usuarios/altaUsuarios.jsp</result>
+		</action>
 	
 		
 	<action name="consultarUsuarios" 
