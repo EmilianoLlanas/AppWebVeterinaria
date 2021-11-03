@@ -53,26 +53,43 @@ public class AltaUsuariosAction extends ActionSupport implements SessionAware{
 
 
 	public String execute() throws SQLException {
-		int newUsuarioID = usuario.getIdUsuario();
+
 		String ret = ERROR;
-
+		
 		UsuarioService UsuarioService = new UsuarioService();
+		System.out.println(usuario.getIdUsuario());
+		System.out.println(usuario.getUser());
+		System.out.println(usuario.getConfirmarPassword());
+		System.out.println(usuario.getEstadoUsuario());
 		UsuarioService.setUsuario(usuario);
-
-		if (0 == newUsuarioID) {
-
+		usuario=UsuarioService.getUsuario();
+		System.out.println(usuario.getIdUsuario());
+		System.out.println(usuario.getUser());
+		System.out.println(usuario.getConfirmarPassword());
+		System.out.println(usuario.getEstadoUsuario());
+		
+		
+		if(usuario.getIdUsuario() == 0)
+		{
 			if(usuario.getPassword().equals(usuario.getConfirmarPassword()))
 			{
 				UsuarioService.altaUsuario();
 				addActionMessage("Alta exitosa");
 				ret = SUCCESS;
 			}
-			else{
+			else
+			{
 				addActionMessage("Las contraseñas no coinciden");
 				return "input";
 			}
+			
+		}
+			
+				
+			
+			
 
-		} 
+		 
 
 		return ret;
 	}

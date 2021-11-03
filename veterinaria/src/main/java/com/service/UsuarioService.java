@@ -17,8 +17,8 @@ public class UsuarioService {
 		return usuario;
 	}
 
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
+	public void setUsuario(Usuario usuarioo) {
+		this.usuario = usuarioo;
 	}
 
 	public boolean isUserRegister() throws SQLException {
@@ -119,4 +119,5 @@ public class UsuarioService {
 		conexion.closeConnection();
 
 	}
+	
 }
