@@ -21,8 +21,7 @@ public class PacienteService {
 	public void setPaciente(Paciente paciente) {
 		this.paciente = paciente;
 	}
-	
-	
+		
 	public Paciente altaPaciente() throws SQLException
 	{
 		Conexion conexion = new Conexion();
@@ -60,7 +59,6 @@ public class PacienteService {
 			paciente.setEdad(rs.getInt(3));
 			
 			pacientes.add(paciente);
-			
 		}
 		
 		conexion.closeConnection();
