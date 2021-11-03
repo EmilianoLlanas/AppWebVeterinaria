@@ -18,7 +18,7 @@
   	
   <br>
   
-	<div class="card" style="margin-top: 70px;">
+	<div class="card" style="margin-top: 20px;">
 	  <div class="card-header">
 	    Alta de usuarios
 	  </div>
@@ -42,7 +42,9 @@
     <s:select class="form-control" id="usuario.estadoUsuario" name="usuario.estadoUsuario" list="#{'ACTIVO':'ACTIVO', 'BLOQUEADO':'BLOQUEADO', 'INACTIVO':'INACTIVO'}" value="estado" required="true" label="Estado"/>
   </div>
   <s:submit  class="btn btn-success" value="Aceptar"/>
-  <s:submit  class="btn btn-danger" value="Cancelar"/>
+  <s:url var="adminCtes" action="inicio">
+			</s:url>
+			<s:a href="%{adminCtes}" cssClass="btn btn-outline-danger">Cancelar</s:a>
 </s:form>
 	  </div>
 	</div>

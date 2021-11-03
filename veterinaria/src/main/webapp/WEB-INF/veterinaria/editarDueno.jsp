@@ -21,19 +21,19 @@
 <s:hidden name="dueño.idDueño"></s:hidden>
   <div class="form-group">
   <label for="nombre">Nombre completo</label>
-    <s:textfield type="text" class="form-control" id="dueño.nombre" name="dueño.nombre" placeholder="Nombre completo"></s:textfield>
+    <s:textfield type="text" class="form-control" id="dueno.nombre" name="dueno.nombre" placeholder="Nombre completo"></s:textfield>
   </div>
   <div class="form-group">
   <label for="direccion">Dirección</label>
-    <s:textfield type="text" class="form-control" id="dueño.direccion" name="dueño.direccion" placeholder="Dirección"></s:textfield>
+    <s:textfield type="text" class="form-control" id="dueno.direccion" name="dueno.direccion" placeholder="Dirección"></s:textfield>
   </div>
   <div class="form-group">
   <label for="telefono">Teléfono</label>
-    <s:textfield type="text" class="form-control" id="dueño.telefono" name="dueño.telefono" placeholder="Teléfono"></s:textfield>
+    <s:textfield type="text" class="form-control" id="dueno.telefono" name="dueno.telefono" placeholder="Teléfono"></s:textfield>
   </div>
   <div class="form-group">
   <label for="rfc">RFC</label>
-    <s:textfield type="text" class="form-control" id="dueño.rfc" name="dueño.rfc" placeholder="RFC"></s:textfield>
+    <s:textfield type="text" class="form-control" id="dueno.rfc" name="dueno.rfc" placeholder="RFC"></s:textfield>
   </div>
   <s:submit  class="btn btn-success" value="Aceptar"/>
   <s:submit  class="btn btn-danger" value="Cancelar"/>

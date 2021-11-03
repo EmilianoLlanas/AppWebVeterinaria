@@ -10,8 +10,14 @@
 <title>Alta de paciente</title>
 </head>
 <body>
-<%@include file="../menu.jsp" %>
+
 <div class="container">
+ <div class="row mb-5">
+    <%@include file="../menu.jsp" %><br>
+  	</div>
+  	
+  <br>
+  
 	<div class="card" style="margin-top: 70px;">
 	  <div class="card-header">
 	    Alta de paciente

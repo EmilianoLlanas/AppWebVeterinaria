@@ -20,8 +20,8 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item active">
-      <s:url var="cuenta" action= "crearCuenta"></s:url>
-        <s:a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></s:a>
+      <s:url var="cuenta" action= "inicio"></s:url>
+        <s:a class="nav-link active" href="%{cuenta}">Inicio</s:a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -41,10 +41,10 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <s:url var="consultarDuenos" action= "consultarDuenos"></s:url>
-          <s:a action= "consultarDuenos" class="dropdown-item" href="%{consultarDuenos}">Consultar due�os</s:a>
+          <s:a action= "consultarDuenos" class="dropdown-item" href="%{consultarDuenos}">Consultar duenos</s:a>
 
           <s:url var="altaDueno" action= "altaDueno"></s:url>
-          <s:a action= "altaDueno" class="dropdown-item" href="%{altaDueno}">Alta de due�o</s:a>
+          <s:a action= "altaDueno" class="dropdown-item" href="%{altaDueno}">Alta de dueno</s:a>
 
           <s:url var="verPacientes" action= "verPacientes"></s:url>
           <s:a action= "verPacientes" class="dropdown-item" href="%{verPacientes}">Ver pacientes</s:a>
@@ -54,7 +54,8 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Salir</a>
+      <s:url var="logout" action= "logout"></s:url>
+        <s:a class="nav-link active" href="%{logout}">Salir</s:a>
       </li>
     </ul>
   </div>

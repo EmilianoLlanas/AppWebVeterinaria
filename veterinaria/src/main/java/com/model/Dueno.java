@@ -1,17 +1,17 @@
 package com.model;
 
-public class Dueño {
-	private int idDueño;
+public class Dueno {
+	private int idDueno;
 	private String nombre;
 	private String direccion;
 	private String rfc;
 	private Long telefono;
 	
-	public int getIdDueño() {
-		return idDueño;
+	public int getIdDueno() {
+		return idDueno;
 	}
-	public void setIdDueño(int idDueño) {
-		this.idDueño = idDueño;
+	public void setIdDueno(int idDueno) {
+		this.idDueno = idDueno;
 	}
 	public String getNombre() {
 		return nombre;

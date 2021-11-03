@@ -1,6 +1,6 @@
-package com.pacientes;
+package com.dueno;
 
-public class AltaPacienteAction {
+public class EditarDuenoAction {
 	public String init() {
 
         return "success";
