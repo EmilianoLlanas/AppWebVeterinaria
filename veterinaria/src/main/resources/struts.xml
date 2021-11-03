@@ -17,6 +17,7 @@
             <result name="input">/index.jsp</result>
     </action>
 
+
 	<action name="altaUsuario" 
        		   class="com.usuarios.AltaUsuariosAction" 
        		   method="init">
@@ -51,6 +52,18 @@
        		   class="com.veterinaria.ConsultaGeneralAction" 
        		   method="init">
      		<result name="success">/WEB-INF/veterinaria/consultaGeneral.jsp</result>
+		</action>
+		
+		<action name="cambioUsuario" 
+       		   class="com.usuarios.CambioUsuariosAction" 
+       		   method="init">
+     		<result name="success">/WEB-INF/usuarios/cambioUsuario.jsp</result>
+		</action>
+		
+		<action name="bajaUsuario" 
+       		   class="com.usuarios.BajaUsuarioAction" 
+       		   method="init">
+     		<result name="success">/WEB-INF/usuarios/bajaUsuario.jsp</result>
 		</action>
 
 
