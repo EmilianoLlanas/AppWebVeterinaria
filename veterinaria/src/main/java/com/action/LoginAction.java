@@ -1,31 +1,51 @@
 package com.action;
 
-import com.opensymphony.xwork2.ActionSupport;
+import java.sql.*;
+import java.util.Map;
 
-public class LoginAction extends ActionSupport{
-	private String usuario;
-	private String password;
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.model.Usuario;
+import com.opensymphony.xwork2.ActionSupport;
+import com.service.UsuarioService;
+
+public class LoginAction extends ActionSupport implements SessionAware{
+	private static final long serialVersionUID = 1L;
+	private Usuario user;
+	private Map<String, Object> session;
 	
-	public String getUsuario() {
-		return usuario;
+	@Override
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
 	}
-	public void setUsuario(String usuario) {
-		this.usuario = usuario;
+	public Usuario getUser() {
+		return user;
 	}
-	
-	public String getPassword() {
-		return password;
+	public void setUser(Usuario user) {
+		this.user = user;
 	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
-	
-	public String execute() {
-		if("scott".equals(usuario) && "navy".equals(password)) {
-			return "success";
-		}else {
-			super.addActionError("Datos invalidos");
+
+//	
+	public String execute() throws SQLException {
+		String ret = ERROR;
+		
+		UsuarioService usuarioService= new UsuarioService();
+		
+		usuarioService.setUsuario(user);
+		user=usuarioService.getUsuario();
+		
+		System.out.println(user.getUser());
+		System.out.println(user.getPassword());
+		System.out.println(usuarioService.isUserRegister());
+		
+		if (usuarioService.isUserRegister()) {
+			ret = SUCCESS;
+		} else {
+			addActionError("Usuario invalido favor de verificar");
 			return "input";
 		}
+
+		return ret;
 	}
+
 }

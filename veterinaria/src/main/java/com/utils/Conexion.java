@@ -72,7 +72,6 @@ public class Conexion {
 		  return this;
 		}
 
-	
 		public void closeConnection() {
 			if (con != null) {
 				try {
@@ -84,7 +83,6 @@ public class Conexion {
 				}
 			}
 		}
-		
 		public void setAutoCommit(boolean type){
 			try {
 				con.setAutoCommit(type);
@@ -92,7 +90,6 @@ public class Conexion {
 				e.printStackTrace();
 			}
 		}
-		
 		public void commit()
 		{
 		  try {
