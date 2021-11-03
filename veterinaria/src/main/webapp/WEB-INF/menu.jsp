@@ -1,20 +1,65 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>menu</title>
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
-integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
-integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<script src="https://kit.fontawesome.com/a73f6b1872.js" crossorigin="anonymous"></script>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<title>Veterinaria</title>
 </head>
 <body>
-<h1>bichoooooo</h1>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #e3f2fd; color: blue; margin-bottom: 30px;">
+  <a class="navbar-brand" href="#">Veterinaria</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+      <s:url var="cuenta" action= "inicio"></s:url>
+        <s:a class="nav-link active" href="%{cuenta}">Inicio</s:a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Administrar usuarios
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <s:url var="altaUsuario" action= "altaUsuario"></s:url>
+          <s:a action= "altaUsuario" class="dropdown-item" href="%{altaUsuario}">Alta de usuarios</s:a>
+          <s:url var="consultarUsuarios" action= "consultarUsuarios"></s:url>
+          <s:a action= "consultarUsuarios" class="dropdown-item" href="%{consultarUsuarios}">Consultar usuarios</s:a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Administrar veterinaria
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <s:url var="consultarDuenos" action= "consultarDuenos"></s:url>
+          <s:a action= "consultarDuenos" class="dropdown-item" href="%{consultarDuenos}">Consultar duenos</s:a>
+
+          <s:url var="altaDueno" action= "altaDueno"></s:url>
+          <s:a action= "altaDueno" class="dropdown-item" href="%{altaDueno}">Alta de dueno</s:a>
+
+          <s:url var="verPacientes" action= "verPacientes"></s:url>
+          <s:a action= "verPacientes" class="dropdown-item" href="%{verPacientes}">Ver pacientes</s:a>
+
+          <s:url var="consultaGeneral" action= "consultaGeneral"></s:url>
+          <s:a action= "consultaGeneral" class="dropdown-item" href="%{consultaGeneral}">Consulta general</s:a>
+        </div>
+      </li>
+      <li class="nav-item">
+      <s:url var="logout" action= "logout"></s:url>
+        <s:a class="nav-link active" href="%{logout}">Salir</s:a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
 </body>
 </html>
