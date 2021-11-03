@@ -7,7 +7,7 @@
 <meta charset="ISO-8859-1">
 
 
-<title>Alta de paciente</title>
+<title>Baja de paciente</title>
 </head>
 <body>
 
@@ -19,7 +19,7 @@
   <br>
 	<div class="card" style="margin-top: 70px;">
 	  <div class="card-header">
-	    Alta de paciente
+	    Baja de paciente
 	  </div>
 	  <div class="card-body">
 <s:form>

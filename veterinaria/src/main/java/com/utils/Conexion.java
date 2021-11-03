@@ -43,22 +43,6 @@ public class Conexion {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
-//	public Conexion establishConnection() {
-//		  if (con == null) {
-//		    try {
-//		      Class.forName("com.mysql.cj.jdbc.Driver");
-//		      con = DriverManager.getConnection(connectionUrl, username, password);
-//
-//		    } catch (ClassNotFoundException e) {
-//		      e.printStackTrace();
-//		    } catch (SQLException e) {
-//		      e.printStackTrace();
-//		      estatus = e.getMessage();
-//		    }
-//		  }
-//		  return this;
-//		}
 	
 	public Conexion establishConnection() {
 		  try {

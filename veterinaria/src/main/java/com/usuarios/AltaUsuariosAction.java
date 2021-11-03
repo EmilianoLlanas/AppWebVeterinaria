@@ -83,14 +83,7 @@ public class AltaUsuariosAction extends ActionSupport implements SessionAware{
 				return "input";
 			}
 			
-		}
-			
-				
-			
-			
-
-		 
-
+		} 
 		return ret;
 	}
 
