@@ -1,21 +1,27 @@
 package com.model;
 
 public class Paciente {
+	private int idPaciente;
 	private String nombre;
-	private String edad;
+	private int edad;
 	private String categoria;
 	private String nombreDueno;
-	private Long telefonoDueno;
+	public int getIdPaciente() {
+		return idPaciente;
+	}
+	public void setIdPaciente(int idPaciente) {
+		this.idPaciente = idPaciente;
+	}
 	public String getNombre() {
 		return nombre;
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public String getEdad() {
+	public int getEdad() {
 		return edad;
 	}
-	public void setEdad(String edad) {
+	public void setEdad(int edad) {
 		this.edad = edad;
 	}
 	public String getCategoria() {
@@ -30,10 +36,7 @@ public class Paciente {
 	public void setNombreDueno(String nombreDueno) {
 		this.nombreDueno = nombreDueno;
 	}
-	public Long getTelefonoDueno() {
-		return telefonoDueno;
-	}
-	public void setTelefonoDueno(Long telefonoDueno) {
-		this.telefonoDueno = telefonoDueno;
-	}
+	
+
+	
 }

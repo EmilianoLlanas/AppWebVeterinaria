@@ -29,7 +29,7 @@
   </div>
   <div class="form-group">
   <label for="justificacion">Justificación</label>
-    <s:textfield type="text" class="form-control" id="justificacion" name="justificacion" label="Justificacion" placeholder="Justificacion"></s:textfield>
+    <s:textfield type="text" class="form-control" id="justificacion" name="justificacion" label="Justificacion" placeholder="Justificacion" required="true"></s:textfield>
   </div>
   <s:submit  class="btn btn-success" value="Aceptar"/>
   <s:url var="adminCtes" action="consultarUsuarios">

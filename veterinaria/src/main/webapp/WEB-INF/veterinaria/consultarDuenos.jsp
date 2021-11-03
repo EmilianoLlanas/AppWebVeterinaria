@@ -31,6 +31,7 @@
     <thead>
         <tr class="table-primary">
             <th>No.</th>
+            <th>ID Dueno</th>
             <th>Nombre</th>
             <th>Telefono</th>
 
@@ -49,19 +50,19 @@
 
 
               <td align="center"> 
-                <s:url var="editarPaciente" action="editarPaciente">
+                <s:url var="editarDuenoo" action="editarDueno">
                     <s:param name="dueno.idDueno" value="idDueno" />
                     <s:param name="dueno.nombre" value="nombre" />
                     <s:param name="dueno.telefono" value="telefono" />
                 </s:url>
-                <s:a href="%{editarPaciente}"><i class="fas fa-edit">Editar</i></s:a>
+                <s:a href="%{editarDuenoo}"><i class="fas fa-edit">Editar</i></s:a>
               </td>
 
               <td align="center"> 
-                <s:url var="verPacientes" action="consultaGeneral">
-                    <s:param name="dueno.idDueno" value="idDueno" />
+                <s:url var="consultaPacientes" action="consultaPorDueno">
+                    <s:param name="dueno.nombreDueno" value="nombreDueno"/>
 </s:url>
-                <s:a href="%{varPAcientes}"><i class="fas fa-trash" >Var pacientes</i></s:a>
+                <s:a href="%{consultaPacientes}"><i class="fas fa-trash" >Ver pacientes</i></s:a>
               </td>
 
 

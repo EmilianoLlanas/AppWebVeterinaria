@@ -41,12 +41,21 @@
        		   class="com.usuarios.CambioUsuariosAction" 
        		   method="init">
      		<result name="success">/WEB-INF/usuarios/cambioUsuario.jsp</result>
+     		
+		</action>
+		
+		<action name="cambioUsuarioBD" 
+       		   class="com.usuarios.CambioUsuariosAction" 
+       		   method="execute">
+     		<result name="success">/WEB-INF/usuarios/consultarUsuarios.jsp</result>
+     		<result name="input">/WEB-INF/usuarios/cambioUsuario.jsp</result>
 		</action>
 		
 		<action name="bajaUsuario" 
        		   class="com.usuarios.BajaUsuarioAction" 
        		   method="init">
      		<result name="success">/WEB-INF/usuarios/bajaUsuario.jsp</result>
+     		
 		</action>
 		
 		<action name="bajaUsuarioBD" 
@@ -55,12 +64,25 @@
      		<result name="success">/WEB-INF/usuarios/consultarUsuarios.jsp</result>
 		</action>
 			
-	
+
 		
 	<action name="consultarUsuarios" 
        		   class="com.usuarios.ConsultarUsuariosAction" 
        		   method="execute">
      		<result name="success">/WEB-INF/usuarios/consultarUsuarios.jsp</result>
+		</action>
+		
+		
+		<action name="altaDueno" 
+       		   class="com.dueno.AltaDuenoAction" 
+       		   method="init">
+     		<result name="success">/WEB-INF/veterinaria/altaDueno.jsp</result>
+		</action>
+		
+	<action name="altaDuenoBD" 
+       		   class="com.dueno.AltaDuenoAction" 
+       		   method="execute">
+     		<result name="success">/WEB-INF/menu.jsp</result>
 		</action>
 		
 	<action name="consultarDuenos" 
@@ -69,11 +91,18 @@
      		<result name="success">/WEB-INF/veterinaria/consultarDuenos.jsp</result>
 		</action>
 		
-	<action name="altaDueno" 
-       		   class="com.dueno.AltaDuenoAction" 
+			<action name="editarDueno" 
+       		   class="com.dueno.EditarDuenoAction" 
        		   method="init">
-     		<result name="success">/WEB-INF/veterinaria/altaDueno.jsp</result>
+     		<result name="success">/WEB-INF/veterinaria/editarDueno.jsp</result>
 		</action>
+		
+			<action name="editarDuenoBD" 
+       		   class="com.dueno.EditarDuenoAction" 
+       		   method="execute">
+     		<result name="success">/WEB-INF/menu.jsp</result>
+		</action>
+	
 		
 
 		
@@ -83,17 +112,13 @@
      		<result name="success">/WEB-INF/veterinaria/altaPaciente.jsp</result>
 		</action>
 		
-	<action name="verPacientes" 
+	<action name="consultaPorDueno" 
        		   class="com.pacientes.ConsultarPacientesAction" 
-       		   method="init">
+       		   method="execute">
      		<result name="success">/WEB-INF/veterinaria/verPacientes.jsp</result>
 		</action>
 		
-	<action name="editarDueno" 
-       		   class="com.dueno.EditarDuenoAction" 
-       		   method="init">
-     		<result name="success">/WEB-INF/veterinaria/editarDueno.jsp</result>
-		</action>
+
 		
 	<action name="editarPaciente" 
        		   class="com.pacientes.EditarPacienteAction" 

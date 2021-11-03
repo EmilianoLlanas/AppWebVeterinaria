@@ -34,9 +34,7 @@ public class LoginAction extends ActionSupport implements SessionAware{
 		usuarioService.setUsuario(user);
 		user=usuarioService.getUsuario();
 		
-		System.out.println(user.getUser());
-		System.out.println(user.getPassword());
-		System.out.println(usuarioService.isUserRegister());
+		
 		
 		if (usuarioService.isUserRegister()) {
 			ret = SUCCESS;

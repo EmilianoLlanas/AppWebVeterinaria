@@ -46,6 +46,7 @@ public class CambioUsuariosAction extends ActionSupport implements SessionAware{
 		this.Usuarios = Usuarios;
 	}
 
+	
 
 
 	public String init() {
@@ -59,9 +60,19 @@ public class CambioUsuariosAction extends ActionSupport implements SessionAware{
 
 		UsuarioService UsuarioService = new UsuarioService();
 		UsuarioService.setUsuario(usuario);
-		UsuarioService.editarUsuario();
-		addActionMessage("Edicion exitosa");
-		ret = SUCCESS;
+		
+		if(usuario.getPassword().equals(usuario.getConfirmarPassword()))
+		{
+			UsuarioService.editarUsuario();
+			addActionMessage("Edicion exitosa");
+			ret = SUCCESS;
+		}
+		else
+		{
+			addActionMessage("Las contraseñas no coinciden");
+			return "input";
+		}
+		
 
 		return ret;
 	}

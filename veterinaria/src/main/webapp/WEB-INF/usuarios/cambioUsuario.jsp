@@ -16,25 +16,28 @@
 	    Cambio a usuario
 	  </div>
 	  <div class="card-body">
-<s:form>
+<s:form action="cambioUsuarioBD" method="POST" id="formulario">
+<s:hidden name="usuario.idUsuario"></s:hidden>
   <div class="form-group">
-  <label for="usuario">Usuario</label>
-    <s:textfield type="text" class="form-control" id="usuario" name="usuario" label="Usuario" placeholder="Usuario" disabled="true"></s:textfield>
+  <label for="user">Usuario</label>
+    <s:textfield type="text" class="form-control" id="usuario.user" name="usuario.user" label="Usuario" placeholder="Usuario" disabled="true" required="true"></s:textfield>
   </div>
   <div class="form-group">
-  <label for="password1">Contraseña</label>
-    <s:textfield type="password" class="form-control" id="password1" name="password1" label="Contraseña" placeholder="Contraseña"></s:textfield>
+  <label for="password">Contraseña</label>
+    <s:textfield type="password" class="form-control" id="usuario.password" name="usuario.password" label="Contraseña" placeholder="Contraseña" required="true"></s:textfield>
   </div>
   <div class="form-group">
-  <label for="password2">Confirmar contraseña</label>
-    <s:textfield type="password" class="form-control" id="password2" name="password2" label="Confirmar contraseña" placeholder="Confirmar contraseña"></s:textfield>
+  <label for="confirmarPassword">Confirmar contraseña</label>
+    <s:textfield type="password" class="form-control" id="usuario.confirmarPassword" name="usuario.confirmarPassword" label="Confirmar contraseña" placeholder="Confirmar contraseña" required="true"></s:textfield>
   </div>
   <div class="form-group">
-    <label for="estado">Estado</label>
-    <s:select class="form-control" id="estado" name="estado" list="#{'01':'Activo', '02':'Bloqueado', '03':'Inactivo'}" value="estado" required="true" label="Estado"/>
+    <label for="estadoUsuario">Estado</label>
+    <s:select class="form-control" id="usuario.estadoUsuario" name="usuario.estadoUsuario" list="#{'ACTIVO':'Activo', 'BLOQUEADO':'Bloqueado', 'INACTIVO':'Inactivo'}" value="estado" required="true" label="Estado"/>
   </div>
   <s:submit  class="btn btn-success" value="Aceptar"/>
-  <s:submit  class="btn btn-danger" value="Cancelar"/>
+  <s:url var="adminCtes" action="consultarUsuarios">
+			</s:url>
+			<s:a href="%{adminCtes}" cssClass="btn btn-outline-danger">Cancelar</s:a>
 </s:form>
 	  </div>
 	</div>

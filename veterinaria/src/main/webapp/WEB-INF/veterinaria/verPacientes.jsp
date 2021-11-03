@@ -30,6 +30,7 @@
     <thead>
         <tr class="table-primary">
             <th>No.</th>
+            <th>idPaciente</th>
             <th>Nombre</th>
             <th>Categoría</th>
             <th>Edad(años)</th>

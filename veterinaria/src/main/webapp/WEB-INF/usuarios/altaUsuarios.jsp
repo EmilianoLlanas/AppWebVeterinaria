@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<link href="styles/validations.css" rel="stylesheet">
 
 <title>Alta usuarios</title>
 </head>
@@ -23,21 +24,21 @@
 	    Alta de usuarios
 	  </div>
 	  <div class="card-body">
-<s:form action="altaUsuarioBD" method="POST">
+<s:form action="altaUsuarioBD" method="POST" id="formulario">
   <s:hidden name="user.idUsuario"></s:hidden>
-  <div class="form-group">
+  <div class="form-group  control-group">
   <label for="user">Usuario</label>
-    <s:textfield type="text" class="form-control" id="usuario.user" name="usuario.user" label="Usuario" placeholder="Usuario"></s:textfield>
+    <s:textfield type="text" class="form-control" id="usuario.user" name="usuario.user" label="Usuario" placeholder="Usuario" required="true"></s:textfield>
   </div>
-  <div class="form-group">
+  <div class="form-group  control-group">
   <label for="password">Contrasena</label>
-    <s:textfield type="password" class="form-control" id="usuario.password" name="usuario.password" label="Contrasena" placeholder="Contrasena"></s:textfield>
+    <s:textfield type="password" class="form-control" id="usuario.password" name="usuario.password" label="Contrasena" placeholder="Contrasena" required="true"></s:textfield>
   </div>
-  <div class="form-group">
+  <div class="form-group  control-group">
   <label for="confirmarPassword">Confirmar contrasena</label>
-    <s:textfield type="password" class="form-control" id="usuario.confirmarPassword" name="usuario.confirmarPassword" label="Confirmar contrasena" placeholder="Confirmar contrasena"></s:textfield>
+    <s:textfield type="password" class="form-control" id="usuario.confirmarPassword" name="usuario.confirmarPassword" label="Confirmar contrasena" placeholder="Confirmar contrasena" required="true"></s:textfield>
   </div>
-  <div class="form-group">
+  <div class="form-group  control-group">
     <label for="estadoUsuario">Estado</label>
     <s:select class="form-control" id="usuario.estadoUsuario" name="usuario.estadoUsuario" list="#{'ACTIVO':'ACTIVO', 'BLOQUEADO':'BLOQUEADO', 'INACTIVO':'INACTIVO'}" value="estado" required="true" label="Estado"/>
   </div>
@@ -49,5 +50,7 @@
 	  </div>
 	</div>
 </div>
+<script src="scripts/datosUsuario.js"></script>
+
 </body>
 </html>

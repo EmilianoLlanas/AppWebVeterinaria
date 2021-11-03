@@ -76,11 +76,12 @@ public class UsuarioService {
 	{
 		Conexion conexion = new Conexion();
 		Connection conn = conexion.establishConnection().getCon();
-		String sql = "UPDATE  veterinaria.usuario SET password=?, SET confirmarPassword=?, SET estadoUsuario=? WHERE idUsuario=?";
+		String sql = "UPDATE veterinaria.usuario SET password=?, confirmarPassword=?, estadoUsuario=? WHERE idUsuario=?";
 		PreparedStatement ps = conn.prepareStatement(sql);
 		ps.setString(1, usuario.getPassword());
 		ps.setString(2, usuario.getConfirmarPassword());
 		ps.setString(3, usuario.getEstadoUsuario());
+		ps.setInt(4, usuario.getIdUsuario());
 
 		ps.executeUpdate();
 		conexion.closeConnection();
@@ -110,7 +111,7 @@ public class UsuarioService {
 		Conexion conexion = new Conexion();
 		Connection conn = conexion.establishConnection().getCon();
 
-		String sql = "DELETE FROM veterinaria.usuario WHERE idUsuario=?";
+		String sql = "UPDATE veterinaria.usuario SET estadoUsuario='INACTIVO' WHERE idUsuario=?";
 		PreparedStatement ps = conn.prepareStatement(sql);
 		ps.setInt(1, usuario.getIdUsuario());
 
