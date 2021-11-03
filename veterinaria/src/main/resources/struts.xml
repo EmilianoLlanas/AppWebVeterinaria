@@ -60,6 +60,12 @@
      		<result name="success">/WEB-INF/veterinaria/editarDueno.jsp</result>
 		</action>
 		
+	<action name="editarPaciente" 
+       		   class="com.veterinaria.EditarPacienteAction" 
+       		   method="init">
+     		<result name="success">/WEB-INF/veterinaria/editarPaciente.jsp</result>
+		</action>
+		
 	<action name="consultaGeneral" 
        		   class="com.veterinaria.ConsultaGeneralAction" 
        		   method="init">
@@ -76,6 +82,12 @@
        		   class="com.usuarios.BajaUsuarioAction" 
        		   method="init">
      		<result name="success">/WEB-INF/usuarios/bajaUsuario.jsp</result>
+		</action>
+		
+	<action name="bajaPaciente" 
+       		   class="com.veterinaria.BajaPacienteAction" 
+       		   method="init">
+     		<result name="success">/WEB-INF/veterinaria/bajaPaciente.jsp</result>
 		</action>
 
 
