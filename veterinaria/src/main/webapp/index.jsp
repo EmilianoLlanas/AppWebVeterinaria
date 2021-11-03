@@ -22,8 +22,8 @@ integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+
 	</s:if>
 	
 	<s:form action="login" method="POST"> 
-		<s:textfield name="usuario" label="Usuario"/>
-		<s:password name="password" label="Password"/>
+		<s:textfield name="user.user" label="Usuario"/>
+		<s:password name="user.password" label="Password"/>
 		<s:submit value="Enviar"/>
 	</s:form>
 		
